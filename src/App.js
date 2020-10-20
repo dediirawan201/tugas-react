@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './Header';
+import Isi from './Isi';
+import Footer from './Footer';
+import Jumbotron from './Jumbotron';
+import Nav from './Nav';
+import Sidebar from './Sidebar';
+class App extends React.Component {
+  render(){
+    return (
+      <div>
+        <Jumbotron />
+        <Nav />
+        <div class="container" styleName="margin-top:30px">
+          <div class="row">
+        <Sidebar />
+        <Header/>
+        {/* <Isi /> */}
+       </div>
+      </div> 
+      <Footer />  
+      </div>
+    );
+  }
 }
+
+
 
 export default App;
